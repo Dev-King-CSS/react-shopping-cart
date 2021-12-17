@@ -4,12 +4,12 @@ import { useQuery } from "react-query"
 import Item from "./item/Item"
 import Cart from "./cart/Cart"
 import Drawer from "@material-ui/core/Drawer"
-import LinearProgress from "@material-ui/core/LinearProgress"
+import CircularProgress from "@material-ui/core/CircularProgress"
 import Grid from "@material-ui/core/Grid"
-import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart"
+// import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart"
 import Badge from "@material-ui/core/Badge"
 //! Styles
-import { Wrapper, StyledButton } from "./App.styles"
+import { Wrapper, StyledButton, CartIcon } from "./App.styles"
 //! Types
 import { CartItemType } from "./utils"
 
@@ -61,7 +61,7 @@ const App = () => {
     )
   }
 
-  if (isLoading) return <LinearProgress />
+  if (isLoading) return <CircularProgress />
   if (error) return <h1>Something went wrong...</h1>
 
   return (
@@ -80,7 +80,7 @@ const App = () => {
         </Drawer>
         <StyledButton onClick={() => setCartIsOpen(true)}>
           <Badge badgeContent={getTotalItems(cartItems)} color="error">
-            <AddShoppingCartIcon />
+            <CartIcon />
           </Badge>
         </StyledButton>
         <Grid container spacing={3}>
