@@ -17,7 +17,7 @@ If you want this to contribute to this repo and run it locally, then you can fol
 1. Clone the project
 
 ```bash
-  git clone <link>
+  git clone https://github.com/Dev-King-CSS/react-shopping-cart
 ```
 
 2. Go inside the project directory
