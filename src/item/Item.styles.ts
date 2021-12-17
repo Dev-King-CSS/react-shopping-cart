@@ -35,6 +35,5 @@ export const Wrapper = styled.div`
   div {
     font-family: Poppins, sans-serif;
     padding: 1rem;
-    height: 100%;
   }
 `
